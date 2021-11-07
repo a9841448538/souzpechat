@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+* {
+/*	padding: 0;
+	margin: 0;*/
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; font-size: 18px; font-weight: 300;
+    color: hsla(0, 100%, 100%, .7);
+    background-color: black;
+    background-image: url(T5Aoo-unsplash2400x1858.jpg) ;
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+    
+    
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  padding: 5px;
+  max-width: 1300px;
+  width: 95%;
+  margin: 20px auto;
+}
+
+header {
+  padding: 0 15px 25px 0;
+  text-align: center;
+}
+
+.container { width: 100%; height: 250px; }
+.container img { width: 100%; height: 100%; }
+
+.copyright {
+    color: rgba(255, 255, 215, .4);
+    text-align: left;
+    line-height: 16px;
+    font-size: .9em;
+    padding: 15px 20px;
+}
+
+
+h1 {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: normal;
+  font-size: 3em;
+  margin: 0 0 .6em 0;
+  color: rgba(255, 255, 255, .5);
+  word-spacing: 7px;
+}
+
+h2 {
+  margin-bottom: 5px;
+  font-size: 1.3em;
+  color: #ef9d26;
+}
+
+/*a, a:visited { color: hsla(360, 100%, 100%, 0.72); }*/
+a, a:visited {
+    color: rgba(206, 97, 1, .8);
+    font-weight: 700;
+}
+
+.intro {
+  font-size: .9em;
+  color: rgba(239, 157, 38, .9);
+  margin: 0 0 25px 0;
+}
+
+
+.info { 
+    color: rgba(206, 97, 1, .8);
+    font-weight: 700;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+ }
+
+.column {
+  flex: 1;
+  background-color: rgba(0, 0, 0, .3);
+  border: 1px solid rgba(239, 157, 38, .5);
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px; 
+}
+
+.column:nth-of-type(1n+2) {
+  margin-left: 30px;
+}
+
+/* Table Style */
+table#planets {
+    margin: 20px 0 0 0;
+    border-collapse: collapse;
+    border: 1px solid rgba(231, 147, 0, .4); /*rgba(154,154,154,.75);*/
+    /*border-spacing: 0;*/
+    background-color: rgba(0, 0, 0, .4);
+}
+
+table#planets th, table#planets td {text-align: center;}
+
+table#planets thead {
+    font-size: .8em;
+    line-height: 12px;
+    background-color: rgba(0, 0, 0, .4);
+    text-transform: uppercase;
+}
+table#planets thead th {
+    color: rgba(231, 147, 0, .8);
+    padding: 10px;
+    vertical-align: bottom;
+}
+table#planets thead th:nth-child(1) {
+    width: 20%;
+    text-align: left;
+    padding-left: 20px;
+}
+table#planets thead th:nth-child(2) {width: 50%;}
+table#planets thead th:nth-child(3) {width: 10%;}
+table#planets thead th:nth-child(4) {width: 10%;}
+table#planets thead th:nth-child(5) {width: 10%;}
+
+table#planets tbody {font-size: .9em; line-height: 20px;}
+table#planets tbody tr {
+    border-top: 1px dotted rgba(248, 220, 174, .5);
+    transition: background-color .6s;
+}
+table#planets tbody tr:first-child {border-top: 1px solid rgba(231, 147, 0, .4);}
+table#planets tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+table#planets tbody tr:hover {
+    background-color: rgba(231, 147, 0, .15);
+}
+
+
+table#planets tbody td {padding: 12px;}
+table#planets tbody td:first-child {
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, .1);
+}
+table#planets tbody td:nth-child(2) {
+    text-align: left; 
+    border-left: 1px dotted rgba(248, 220, 174, .5);
+}
+table#planets tbody td:nth-child(3) {
+    border-left: 1px dotted rgba(248, 220, 174, .5);
+}
+table#planets tbody td:nth-child(4) {
+    border-left: 1px dotted rgba(248, 220, 174, .5);
+}
+table#planets tbody td:nth-child(5) {
+    border-left: 1px dotted rgba(248, 220, 174, .5);
+}
+
+table#planets tfoot {font-size: .8em; border-top: 2px solid rgba(231, 147, 0, .4);}
+table#planets tfoot tr:nth-child(2) {border-top: 1px dotted rgba(248, 220, 174, .5);}
+table#planets tfoot td {
+    color: rgba(255, 255, 215, .7);
+    text-align: left;
+    line-height: 18px;
+    padding: 15px 20px;
+}
+
+
+
+
+footer {
+  padding: 0 15px;
+  font-size: .8em;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 { font-size: 2em; }
+
+  .columns .column {
+    flex-basis: 100%;
+  }
+  
+  .column:nth-of-type(1n+2) { 
+	margin: 30px 0 0 0;
+  }
+  
+}
+
+@media screen and (max-width: 680px) {
+  h1 { font-size: 1.6em; }
+  header p { font-size: .8em; }
+  
+  .columns .column {
+    flex-basis: 100%;
+    font-size: .8em;
+  }
+}
